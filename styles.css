@@ -1,0 +1,1004 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.banner-home{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Images/authentic_hotel.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-bedroom{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Images/bedroom.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-dinning{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Images/dinning.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-kitchen{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Images/kitchen.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-living_room{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Images/living-room.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: top 0.3s;
+    position: sticky;
+    top: -50px;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display:inline-block;
+    margin: 0 20px;
+    position: relative;
+    right: 70px;
+}
+
+#reservation{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 17px;
+    position: relative;
+    left: 0;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#reservation span{
+    border: 1px solid white;
+    padding: 15px;
+}
+
+#reservation span:hover{
+    border: 2px solid white;
+}
+
+#reservation::before{
+    content: "";
+    width: 200px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    top: 67px;
+    left: -10px;
+    transform: skewX(100deg);
+    transition: 0.3s;
+}
+
+.subscribe #reservation::before{
+    content: "";
+    position: absolute;
+    left: 6px;
+}
+
+.subscribe #reservation::after{
+    content: "";
+    position: absolute;
+    right: 95px;
+    top: -14px;
+}
+
+#reservation::after{
+    content: "";
+    position: absolute;
+    top: -13px;
+    right: 78px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    transform: rotate(45deg);
+}
+
+.reservation-button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    transition: 1s;
+}
+
+.subscribe-button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    transition: 1s;
+}
+
+.reservation-button a:hover{
+    position: relative;
+    bottom: -10px;
+}
+
+#reservation:hover::before{
+    width: 0;
+}
+
+#reservation span::before{
+    content: "";
+    position: absolute;
+    bottom: 47.5px;
+    right: 95px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.subscribe span::before{
+    content: "";
+    position: absolute;
+    left: 86px;
+    top: -11px;
+}
+
+.subscribe span:hover::before{
+    position: absolute;
+    left: 10px;
+}
+
+.subscribe span::after{
+    content: "";
+    position: absolute;
+    left: 115px;
+    top: -11px;
+}
+
+.subscribe span:hover::after{
+    content: "";
+    position: absolute;
+    left: 191px;
+}
+
+#reservation span:hover::before{
+    position: absolute;
+    right: 157px;
+    background-color: white;
+}
+
+#reservation span::after{
+    content: "";
+    position: absolute;
+    bottom: 47.5px;
+    right: 67px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+#reservation span:hover::after{
+    position: absolute;
+    right: 9px;
+    background-color: white;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Marcellus',serif;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+span{
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Marcellus',serif;
+    text-transform: uppercase;
+}
+
+.before-span{
+    width: 100px;
+    height: 1px;
+    background: white;
+    margin: 20px auto;
+    position: relative;
+    top: 33px;
+    left: -125px;
+    transform:skewX(100deg);
+}
+
+.after-span{
+    width: 100px;
+    height: .5px;
+    background:white;
+    margin: 20px auto;
+    position: relative;
+    bottom: 33px;
+    left: 125px;
+    transform:skewX(100deg);
+}
+
+.content h1{
+    font-size: 40px;
+    margin: 0.5rem;
+    text-transform: uppercase;
+    font-family: 'Marcellus',serif;
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+
+.line-design{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.right-line{
+    width: 300px;
+    height: 0.5px;
+    margin-bottom: 10px;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.20));
+    position: absolute;
+    bottom: -52px;
+    right: 788px;
+    transform:skewX(100deg);
+}
+
+.left-line{
+    width: 300px;
+    height: 0.5px;
+    margin-bottom: 10px;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.20));
+    position: absolute;
+    bottom: -52px;
+    left: 788px;
+    transform:skewX(100deg);
+}
+
+.bottom-line{
+    width: 300px;
+    height: 0.5px;
+    margin-bottom: 10px;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.20));
+    position: absolute;
+    bottom: -100px;
+    transform:skewX(100deg);
+}
+
+.diamond{
+    margin: 20px auto;
+    width: 15px;
+    height: 15px;
+    background: white;
+}
+
+.diamond-border{
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    margin-top: 20px;
+}
+
+.diamond::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+}
+
+
+.diamond::after {
+    content: "";
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+}
+
+.right-nav ul li a{
+    text-decoration: none;
+    font-family: 'Marcellus',sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0);
+    position: absolute;
+    right: 60px;
+}
+
+.right-nav li{
+    margin-bottom: 40px;
+    width: 40%;
+}
+
+.right-nav #li-1::before{
+    content: "";
+    height: 1px;
+    width: 0;
+    background: rgb(84, 84, 84);
+    position: absolute;
+    top: 210px;
+    right: 40px;
+    transition: 0.3s;
+}
+
+.right-nav #li-2::before{
+    content: "";
+    height: 1px;
+    width: 0;
+    background: rgb(84, 84, 84);
+    position: absolute;
+    top: 270px;
+    right: 40px;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.right-nav #li-3::before{
+    content: "";
+    height: 1px;
+    width: 0;
+    background: rgb(84, 84, 84);
+    position: absolute;
+    top: 330px;
+    right: 40px;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.right-nav #li-4::before{
+    content: "";
+    height: 1px;
+    width: 0;
+    background: rgb(84, 84, 84);
+    position: absolute;
+    top: 390px;
+    right: 40px;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.right-nav #li-5::before{
+    content: "";
+    height: 1px;
+    width: 0;
+    background: rgb(84, 84, 84);
+    position: absolute;
+    top: 450px;
+    right: 40px;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.right-nav #li-6::before{
+    content: "";
+    height: 1px;
+    width: 0;
+    background: rgb(84, 84, 84);
+    position: absolute;
+    top: 510px;
+    right: 40px;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.right-nav #li-7::before{
+    content: "";
+    height: 1px;
+    width: 0;
+    background: rgb(84, 84, 84);
+    position: absolute;
+    top: 570px;
+    right: 40px;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.right-nav a::after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgb(91, 91, 91);
+    right: 30px;
+    transform: rotate(45deg);
+    position: fixed;
+    cursor: pointer;
+}
+
+.right-nav a:hover::after{
+    background-color: rgb(142, 142, 142);
+}
+
+.right-nav a:hover{
+    color: rgb(150, 144, 144);
+    position: absolute;
+    right: 50px;
+    font-size: 12px;
+    position: fixed;
+    z-index: 2;
+}
+
+.right-nav #li-1:hover::before, 
+#li-2:hover::before,
+#li-3:hover::before,
+#li-4:hover::before,
+#li-5:hover::before,
+#li-6:hover::before,
+#li-7:hover::before{
+    visibility: visible;
+    width: 150px;
+    background: rgb(179, 179, 179);
+    position: fixed;
+    z-index: 2;
+}
+
+.featured h1{
+    font-family: 'Marcellus',sans-serif;
+    text-transform: uppercase;
+}
+
+.featured p, h2{
+    font-family: 'Marcellus',sans-serif;
+}
+
+#featured-text{
+    margin: 300px 0px 30px 86px;
+    color: #80714c;
+    font-weight: 500;
+    font-size: 34px;
+}
+
+#featured-text::after{
+    content: "";
+    background: #80714c;
+    height: 0.5px;
+    width: 70px;
+    position: absolute;
+    bottom: -170px;
+    left: 86px;
+}
+
+#featured-text1{
+    color: #80714c;
+    margin: 60px 0px 0px 88px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+#featured-text2{
+    color: #67655f;
+    margin: 5px 0px 0px 88px ;
+}
+
+.night-race img{
+    height: 600px;
+    width: 1300px;
+    position: relative;
+    margin: 30px;
+    left: 60px;
+    z-index: 1;
+}
+
+#discover-text{
+    color: #80714c;
+    margin: 90px 0px 0px 86px;
+    font-weight: 500;
+    font-size: 34px;
+}
+
+#discover-text::after{
+    content: "";
+    background: #80714c;
+    height: 0.5px;
+    width: 70px;
+    position: absolute;
+    bottom: -1190px;
+    left: 86px;
+}
+
+#discover-text1{
+    color: #67655f;
+    margin: 60px 0px 0px 86px ;
+}
+
+.discover{
+    height: 520px;
+}
+
+.discover img{
+    height: 450px;
+    width: 820px;
+    position: relative;
+    left: 600px;
+    bottom: 395px;
+    z-index: 1;
+}
+
+#rooms_suites_text{
+    color: #80714c;
+    margin: 0px 0px 0px 86px;
+    text-align: center;
+    position: relative;
+    bottom: -50px;
+    font-weight: 500;
+    font-size: 34px;
+}
+
+#rooms_suites_text::after{
+    content: "";
+    background: #80714c;
+    height: 0.5px;
+    width: 70px;
+    position: absolute;
+    left: 640px;
+    margin-top: 60px;
+}
+
+#luxury_bedroom{
+    width: 100%;
+    margin-top: 120px;
+}
+
+.new-rooms_suites{
+    background-color: rgba(178, 236, 236, 0.16);
+    width: 100%;
+    height: 2150px;
+}
+
+#new_room_suites{
+    margin: 120px 0px 0px 100px;
+    width: 503px;
+    height: 283px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+#new_room_suites:hover{
+    transform: scale3d(1.2,1.2,1.2);
+}
+
+#bathroom{
+    margin-top: 120px;
+    width: 855px;
+    height: 481px;
+    position: absolute;
+    bottom: -3600px;
+    left: 480px;
+    transition: transform 0.5s ease;
+}
+
+#bathroom:hover{
+    transform: scale3d(1.1,1.1,1.1);
+}
+
+.new-rooms_suites p{
+    font-family: 'Marcellus',sans-serif;
+    color: #67655f;
+    margin: 100px 0px 0px 95px;
+}
+
+.atlas{
+    margin: 500px 0px 150px 0px;
+}
+
+.atlas img{
+    height: 500px;
+    width: 820px;
+    position: relative;
+    right: -25px;
+    bottom: 395px;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+#atlas-text{
+    color: #80714c;
+    font-weight: 500;
+    font-size: 34px;
+    position: absolute;
+    bottom: -3970px;
+    right: 185px;
+    margin-bottom: 20px;
+}
+
+#atlas-text::after{
+    content: "";
+    background: #80714c;
+    height: 0.5px;
+    width: 70px;
+    position: absolute;
+    bottom: -10px;
+    left: -2px;
+}
+
+#atlas-text1{
+    position: absolute;
+    left: 920px;
+    bottom: -4070px;
+    color: #67655f;
+}
+
+#style-text{
+    color: #80714c;
+    margin: 90px 0px 0px 86px;
+    font-weight: 500;
+    font-size: 34px;
+    position: relative;
+    bottom: 400px;
+}  
+
+#style-text::after{
+    content: "";
+    background: #80714c;
+    height: 0.5px;
+    width: 70px;
+    position: absolute;
+    bottom: -10px;
+    left: 2px;
+}
+
+#style-text1{
+    position: absolute;
+    top: 5400px;
+    margin-left: 86px;
+    color: #67655f;
+}
+
+.style img{
+    height: 450px;
+    width: 820px;
+    position: relative;
+    left: 600px;
+    bottom: 435px;
+    z-index: 1;
+}
+
+.style{
+    margin-bottom: 150px;
+}
+
+.unique-experiences img{
+    height: 500px;
+    width: 820px;
+    position: relative;
+    right: -25px;
+    bottom: 395px;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.unique-experiences{
+    margin-bottom: 150px;
+}
+
+#experiences-text{
+    color: #80714c;
+    font-weight: 500;
+    font-size: 34px;
+    position: absolute;
+    bottom: -5320px;
+    right: 220px;
+    margin-bottom: 20px;
+}
+
+#experiences-text::after{
+    content: "";
+    background: #80714c;
+    height: 0.5px;
+    width: 70px;
+    position: absolute;
+    bottom: -10px;
+    left: -2px;
+}
+
+#experiences-text1{
+    position: absolute;
+    left: 920px;
+    bottom: -5460px;
+    color: #67655f;
+}
+
+#dusk_dawn-text{
+    color: #80714c;
+    margin: 90px 0px 0px 86px;
+    font-weight: 500;
+    font-size: 34px;
+    position: relative;
+    bottom: 400px;
+}
+
+#dusk_dawn-text::after{
+    content: "";
+    background: #80714c;
+    height: 0.5px;
+    width: 70px;
+    position: absolute;
+    bottom: -10px;
+    left: 2px;
+}
+
+#dusk_dawn-text1{
+    position: absolute;
+    top: 6750px;
+    margin-left: 86px;
+    color: #67655f;
+}
+
+.dusk-to-dawn{
+    margin-bottom: 150px;
+}
+
+#shot-glass{
+    height: 450px;
+    width: 420px;
+    position: relative;
+    left: 700px;
+    bottom: 435px;
+    z-index: 1;
+}
+
+#hotel-bar{
+    height: 300px;
+    width: 550px;
+    position: relative;
+    left: 420px;
+    bottom: 40px;
+    z-index: 1;
+}
+
+#lifestyle-text{
+    color: #80714c;
+    font-weight: 500;
+    font-size: 34px;
+    position: absolute;
+    bottom: -7040px;
+    right: 300px;
+    margin-bottom: 20px;
+}
+
+#lifestyle-text::after{
+    content: "";
+    background: #80714c;
+    height: 0.5px;
+    width: 70px;
+    position: absolute;
+    bottom: -10px;
+    left: -2px;
+}
+
+#lifestyle-text1{
+    position: absolute;
+    left: 915px;
+    bottom: -7220px;
+    color: #67655f;
+}
+
+.sands-lifestyle img{
+    height: 500px;
+    width: 820px;
+    position: relative;
+    right: -25px;
+    bottom: 25px;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.footer{
+    background-color: #80714C;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+
+#footer-text, .footer h3{
+    font-family: 'Marcellus', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+
+#footer-text{
+    position: absolute;
+    left: 70px;
+    bottom: -7730px;
+}
+
+
+.footer a {
+    font-family: 'Marcellus', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.footer li{
+    color: #80714C;
+}
+
+#get_to_know{
+    position: absolute;
+    left: 70px;
+    bottom: -8000px;
+}
+
+#get_to_know h3{
+    margin: 200px 0px 40px 0px;
+}
+
+#get_to_know li{
+    margin-bottom: 10px;
+}
+
+#experience_with_us{
+    position: absolute;
+    left: 400px;
+    bottom: -8030px;
+}
+
+#experience_with_us h3{
+    margin-bottom: 40px;
+}
+
+#experience_with_us li{
+    margin-bottom: 10px;
+}
+
+#download{
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+
+#app_store img{
+    width: 125px;
+    height: 41px;
+    position: absolute;
+    right: -17px;
+    top: 35px;
+    filter: brightness(1.2);
+}
+
+#play_store img{
+    width: 95px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+}
+
+#connect-with-us{
+    margin-top: 70px;
+    text-align: center;
+}
+
+#twitter img,
+#facebook img,
+#instagram img{
+    height: 40px;
+    width: 40px;
+}
+
+#twitter img{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#facebook img{
+    position: relative;
+    left: 70px;
+    bottom: 44px;
+}
+
+#instagram img{
+    position: relative;
+    left: 118px;
+    bottom: 88px;
+}
+
+.back-to-top{
+    background-image: url(Images/Scroll\ Up.png);
+    width: 33px;
+    height: 33px;
+    filter: brightness(2);
+    position: fixed;
+    top: 600px;
+    right: 17px;
+    cursor: pointer;
+    background-color: #332b19;
+    border-radius: 50%;
+    border-color: white;
+    background-repeat: no-repeat;
+    background-position: -8.5px;
+    z-index: 100;
+    display: block;
+}
+
+.subscribe{
+    position: absolute;
+    left: 1100px;
+    bottom: -7910px;
+}
+
+.subscribe h3, p{
+    color: white;
+    font-family: 'Marcellus',sans-serif;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.subscribe h3{
+    text-transform: uppercase;
+}
+
+.subscribe button{
+    margin-top: 40px;
+    position: absolute;
+    left: -13px;
+}
+
